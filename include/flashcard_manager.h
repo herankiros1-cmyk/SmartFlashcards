@@ -19,7 +19,7 @@ public:
     explicit FlashcardManager (const std::string& dataFile);
     ~FlashcardManager();
 
-    //Curd
+    //CRUD
     void addFlashcard(const Flashcard& card);
     bool removeFlashcard(const std::string& question);
 
@@ -35,4 +35,4 @@ public:
     bool isEmpty() const;
     int size() const;
 };
-endif //FLASHCARD_MANAGER_H
+#endif //FLASHCARD_MANAGER_H

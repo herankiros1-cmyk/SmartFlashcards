@@ -1,5 +1,6 @@
 #ifndef Flashcard_H
 #define Flashcard_H
+
 #include <string>
 
 /**
@@ -9,11 +10,11 @@ class Flashcard {
 private:
     std::string question;
     std::string answer;
-    bool markCorrect;
+    bool markedCorrect; // last review result
 
 public:
-    FlashCard();
-    Flascard(const std::string& q, const std::string& a);
+    Flashcard();
+    Flashcard(const std::string& q, const std::string& a);
 
     //Getters
     std::string getQuestion() const;

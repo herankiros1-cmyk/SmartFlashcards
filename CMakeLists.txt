@@ -6,8 +6,8 @@ set (CMAKE_CXX_STANDARD_REQUIRED True)
 include_directories(include)
 
 set(SOURCES
-    src/main.cpp
-    # src/flashcard.cpp
-    # src/flashcard_manager.cpp
+        src/main.cpp
+        src/flashcard.cpp
+        src/flashcard_manager.cpp
 )
 add_executable(SmartFlashcards ${SOURCES})

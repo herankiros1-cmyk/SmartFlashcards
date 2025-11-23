@@ -32,8 +32,10 @@ int main() {
             //Add flashcard
             string q = getLineTrimmed("Question: ");
             string a = getLineTrimmed("Answer: ");
-            // TODO: Flashcard card(q, a); manager.addFlashcard(card);
-            cout << "[TODO] addFlashcard(q, a)\n";
+
+            Flashcard card(q, a);
+            manager.addFlashcard(card);
+            cout << "Flashcard added successfully!\n";
         } else if (choice == 2) {
             // Review flashcards
             // TODO: manager.reviewAll();

@@ -21,3 +21,34 @@ cmake --build .
 
 ## Author
 Heran Kiros-CIS 25 Final Project
+
+---
+
+---
+
+## Current Status (Checkpoint 1)
+
+### ✔ Implemented
+- Feature 1: **Add New Flashcard**
+- Fully working menu option to create flashcards
+- Flashcards stored correctly in FlashcardManager
+- Automated tests (test_feature executable)
+- All 3 tests pass:
+    - testAddFlashcard
+    - testEmptyFlashcard
+    - testFlashcardEditing
+
+### ⏳ In Progress
+- Feature 2: Review flashcards
+- Feature 3: Quiz mode
+
+### 📋 Planned Features
+- Save flashcards to file
+- Load flashcards at program start
+- Remove flashcard by question
+- More advanced quiz scoring
+
+### ⚠ Known Issues / Limitations
+- File I/O not implemented yet
+- Review mode still uses TODO placeholder
+- Quiz mode still uses TODO placeholder

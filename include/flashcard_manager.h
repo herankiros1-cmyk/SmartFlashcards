@@ -3,7 +3,7 @@
 #include <vector>
 #include <string>
 #include "flashcard.h"
-
+#pragma once
 /**
  *FlashcardManager handles creating, reviewing, and saving flashcards.
  */

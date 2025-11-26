@@ -37,9 +37,7 @@ int main() {
             manager.addFlashcard(card);
             cout << "Flashcard added successfully!\n";
         } else if (choice == 2) {
-            // Review flashcards
-            // TODO: manager.reviewAll();
-            cout << "[TODO] reviewAll()\n";
+           manager.reviewAll();
         } else if (choice == 3) {
             // Quiz mode
             // TODO: manager.quizMode();

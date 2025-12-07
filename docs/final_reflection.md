@@ -1,43 +1,47 @@
- # Final Reflection - Smart Flashcard
- 
+# Final Reflection – Smart Flashcards
+
 ## Section 1: Project Summary
 
-My project is a command-line flashcard study tool called **Smart Flashcards**. It lets the user creat flashcards with a question and answer, review them one by one, and save/load them using a file so the card stay between runs.
+My project is a command-line flashcard study tool called **Smart Flashcards**.  
+It allows the user to create flashcards, review them, quiz themselves, and save/load the deck from a file so the cards stay between runs.
+
 **Features I implemented:**
-- Add new flashcards (question + answer)
-- Review flashcards one at a time and mark them correct/incorrect
+- Add new flashcards
+- Review flashcards (question → answer → mark correct/incorrect)
 - Save all flashcards to a text file
-- Load all flashcards from a file when the program starts
-- Automated tests for add, review, and save/load
+- Load flashcards at program start
+- Basic quiz mode (user types answers and gets a score)
+- Automated tests for adding, reviewing, and saving/loading
 
 **What my project does well:**
-- It has a clear, simple menu.
-- The study flow makes sense: add → review → save → load.
-- It doesn’t crash when there are no flashcards.
-- It keeps my flashcards even after I close the program.
+- Simple and clear menu
+- Smooth workflow (add → review → quiz → save)
+- Doesn’t crash on empty decks
+- Saves and loads consistently
+- Works reliably across multiple sessions
 
 ---
 
 ## Section 2: What Remains
 
-There are still some things I did not finish completely:
+Some features are not finished yet.
 
-**Not implemented or only partially implemented:**
-- Quiz mode (a mode where the user types the answer and the program checks it)
-- Deleting a specific flashcard by question
-- Extra statistics (like total correct, accuracy percentage)
-- More advanced error handling for bad file formats or corrupted files
+**Not implemented or only partly implemented:**
+- Delete flashcard by question
+- More advanced quiz answer checking
+- Statistics such as accuracy or total correct
+- Better error handling for corrupted files
 
 **Remaining bugs or issues:**
-- Quiz mode option is in the menu, but it still uses a TODO placeholder.
-- There is no option yet to remove a card if I don’t need it anymore.
-- The file format is simple and does not handle edge cases like very long lines or special characters.
+- Quiz mode does not update each flashcard’s stored correctness
+- No delete option yet
+- Save/load format is simple and could break with certain characters
 
-**What I would need to do to consider this project “complete”:**
-- Fully implement quiz mode with answer checking and scoring.
-- Add a “delete flashcard” feature from the menu.
-- Improve error handling for file loading (for example, show a message if the file is missing or broken).
-- Add some basic stats, like number of cards and how many were marked correct.
+**What I would need to make this project fully complete:**
+- Improve quiz mode
+- Add delete flashcard feature
+- Add simple statistics
+- Strengthen error handling
 
 ---
 
@@ -45,58 +49,60 @@ There are still some things I did not finish completely:
 
 Here is my estimate for the remaining pieces:
 
-| Remaining Item                 | Time Estimate | Priority    |
-|--------------------------------|--------------:|------------:|
-| Implement quiz mode            |      3–4 hrs  | Must-have   |
-| Delete flashcard by question   |      1–2 hrs  | Should-have |
-| Better file error handling     |      1–2 hrs  | Should-have |
-| Add basic statistics (accuracy)|      2–3 hrs  | Nice-to-have|
-| Extra polish on UI/messages    |      1–2 hrs  | Nice-to-have|
+| Remaining Item               | Time Estimate | Priority     |
+|-----------------------------|--------------:|--------------|
+| Implement quiz mode fully   | 3–4 hrs       | Must-have    |
+| Delete flashcard feature    | 1–2 hrs       | Should-have  |
+| Better file error handling  | 1–2 hrs       | Should-have  |
+| Add stats (accuracy, totals)| 2–3 hrs       | Nice-to-have |
+| UI/message polishing        | 1–2 hrs       | Nice-to-have |
 
 ---
 
 ## Section 4: What I Learned
 
-During this project, I learned and practiced a lot of C++ concepts:
+I learned a lot about C++ and building a full project from scratch.
 
-- How to design and use **classes** (`Flashcard`, `FlashcardManager`) with headers and .cpp files.
-- How to store objects in a `std::vector` and loop through them.
-- How to write and run **unit tests** using small test programs.
-- How to use **file I/O** (`ifstream` and `ofstream`) to save and load data.
-- How to think about program flow and user experience in a console app.
+**Skills I improved:**
+- Designing and using classes across .h and .cpp files
+- Storing objects in vectors and looping through them
+- Writing small automated test programs
+- Using file I/O to save and load data
+- Understanding how a full project connects (main, classes, tests, CMake)
 
-**Hardest parts of the project:**
-- Getting CMake, CLion, and GitHub all set up correctly.
-- Understanding how everything connects: main.cpp, classes, CMakeLists, and tests.
-- Making sure the file format for save/load was consistent so loading works correctly.
-- Keeping track of all the features and checkpoints at the same time.
+**Hardest parts:**
+- Fixing CLion/CMake/GitHub setup issues
+- Making save/load consistent
+- Debugging build errors
+- Keeping track of everything between checkpoints
 
-**What I would do differently if I started over:**
-- Plan the features and file format more clearly at the start.
-- Start the tests earlier instead of writing them after everything.
-- Commit to GitHub more often with smaller changes.
-- Leave more time for quiz mode and “delete” feature.
+**What I would do differently:**
+- Plan file format earlier
+- Write tests sooner
+- Commit smaller changes more often
+- Leave more time for quiz mode and delete feature
 
-**What I am most proud of:**
-- I got three main features (Add, Review, Save/Load) all working together.
-- I wrote multiple test files and used them to catch mistakes.
-- I pushed through setup problems and build errors instead of giving up.
-- I now have a working study tool that actually feels useful.
+**What I am proud of:**
+- I completed three major features that actually work
+- I wrote multiple test files and used them effectively
+- I solved many setup and build errors
+- The project turned into a usable flashcard tool
 
-**How my understanding of data structures changed:**
-- I got more comfortable using `std::vector` and indexing it safely.
-- I understand better how objects live inside containers and how methods like `push_back`, `size`, and `erase` work.
-- I saw how classes and vectors together can model something real, like a deck of flashcards.
+**How my understanding improved:**
+- I learned how vectors really work
+- I understand object management better
+- I saw how classes + vectors can model real systems like flashcards
 
 ---
 
 ## Section 5: Time Log
 
-These are rough estimates of how much time I spent across the whole project:
+My estimated time spent across the project:
 
-- **Planning and design:** 3–4 hours
-- **Implementation (coding features):** 10–12 hours
-- **Testing and debugging:** 6–8 hours
-- **Documentation and reflection (README, plans, tests, reflections):** 4–5 hours
+- **Planning & design:** 3–4 hours
+- **Implementation:** 10–12 hours
+- **Testing & debugging:** 6–8 hours
+- **Documentation & reflection:** 4–5 hours
 
-**Total estimated time:** about **23–29 hours** over all checkpoints and the final submission.
+**Total time:** **23–29 hours**
+

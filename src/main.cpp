@@ -11,8 +11,8 @@ string getLineTrimmed(const string& prompt);
 int main() {
     FlashcardManager manager("flashcards.txt");
 
-    //TODO: uncomment when you implement file I/O
-    //manager.loadFromFile("flashcards.txt");
+    //Load flashcards from file (if it exists)
+    manager.loadFromFile("flashcards.txt");
 
     bool running = true;
     int choice = 0;
@@ -26,6 +26,7 @@ int main() {
             cout << "Please enter a number from the menu.\n";
             continue;
         }
+        //Clear leftover newline
         cin.ignore(numeric_limits<streamsize>::max(), '\n'); //clear newline
 
         if (choice == 1) {
@@ -37,22 +38,28 @@ int main() {
             manager.addFlashcard(card);
             cout << "Flashcard added successfully!\n";
         } else if (choice == 2) {
-           manager.reviewAll();
+            // Review Flashcard
+            manager.reviewAll();
+
         } else if (choice == 3) {
             // Quiz mode
-            // TODO: manager.quizMode();
-            cout << "[TODO] quizMode()\n";
+            manager.quizMode();
+
+
         } else if (choice == 4) {
             // Save & quit
-            // TODO: manager.saveToFile("flashcards.txt");
-            cout << "[TODO] saveToFile(...)\n";
+            if (manager.saveToFile("flashcards.txt")) {
+                cout << "Flashcards saved. Goodbye!\n";
+            } else {
+                cout << "Goodbye (warning: could not save flashcards).\n";
+            }
             running = false;
+
         } else {
             cout << "Invalid choice. Try again.\n";
         }
     }
 
-    cout << "Goodbye!\n";
     return 0;
 }
 
